@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LUNAR STARSHIP</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+	<style>
+		html {
+	 font-size: 14px;
+}
+ body {
+	 background: #f6f9fc;
+	 font-family: "Open Sans", sans-serif;
+	 color: #525f7f;
+}
+ h2 {
+	 margin: 5%;
+	 text-align: center;
+	 font-size: 2rem;
+	 font-weight: 100;
+}
+ .timeline {
+	 display: flex;
+	 flex-direction: column;
+	 width: 50vw;
+	 margin: 5% auto;
+}
+ .timeline__event {
+	 background: #fff;
+	 margin-bottom: 20px;
+	 position: relative;
+	 display: flex;
+	 margin: 20px 0;
+	 border-radius: 8px;
+	 box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+ .timeline__event__title {
+	 font-size: 1.2rem;
+	 line-height: 1.4;
+	 text-transform: uppercase;
+	 font-weight: 600;
+	 color: #9251ac;
+	 letter-spacing: 1.5px;
+}
+ .timeline__event__content {
+	 padding: 20px;
+}
+ .timeline__event__date {
+	 color: #f6a4ec;
+	 font-size: 1.5rem;
+	 font-weight: 600;
+	 white-space: nowrap;
+}
+ .timeline__event__icon {
+	 border-radius: 8px 0 0 8px;
+	 background: #9251ac;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 flex-basis: 40%;
+	 font-size: 2rem;
+	 color: #9251ac;
+	 padding: 20px;
+}
+ .timeline__event__icon i {
+	 position: absolute;
+	 top: 50%;
+	 left: -65px;
+	 font-size: 2.5rem;
+	 transform: translateY(-50%);
+}
+ .timeline__event__description {
+	 flex-basis: 60%;
+}
+ .timeline__event:after {
+	 content: "";
+	 width: 2px;
+	 height: 100%;
+	 background: #9251ac;
+	 position: absolute;
+	 top: 52%;
+	 left: -3.5rem;
+	 z-index: -1;
+}
+ .timeline__event:before {
+	 content: "";
+	 width: 5rem;
+	 height: 5rem;
+	 position: absolute;
+	 background: #f6a4ec;
+	 border-radius: 100%;
+	 left: -6rem;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 border: 2px solid #9251ac;
+}
+ .timeline__event--type2:before {
+	 background: #87bbfe;
+	 border-color: #555ac0;
+}
+ .timeline__event--type2:after {
+	 background: #555ac0;
+}
+ .timeline__event--type2 .timeline__event__date {
+	 color: #87bbfe;
+}
+ .timeline__event--type2 .timeline__event__icon {
+	 background: #555ac0;
+	 color: #555ac0;
+}
+ .timeline__event--type2 .timeline__event__title {
+	 color: #555ac0;
+}
+ .timeline__event--type3:before {
+	 background: #aff1b6;
+	 border-color: #24b47e;
+}
+ .timeline__event--type3:after {
+	 background: #24b47e;
+}
+ .timeline__event--type3 .timeline__event__date {
+	 color: #aff1b6;
+}
+ .timeline__event--type3 .timeline__event__icon {
+	 background: #24b47e;
+	 color: #24b47e;
+}
+ .timeline__event--type3 .timeline__event__title {
+	 color: #24b47e;
+}
+ .timeline__event:last-child:after {
+	 content: none;
+}
+ @media (max-width: 786px) {
+	 .timeline__event {
+		 flex-direction: column;
+	}
+	 .timeline__event__icon {
+		 border-radius: 4px 4px 0 0;
+	}
+}
+ 
+	</style>
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header text-light">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+								<img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero text-center text-light">
+				<div class="hero-bg"></div>
+				<div class="hero-particles-container">
+					<canvas id="hero-particles"></canvas>
+				</div>
+                <div class="container-sm">
+                    <div class="hero-inner">
+						<div class="hero-copy">
+	                        <h1 class="hero-title mt-0">LUNAR STARSHIP</h1>
+	                        <p class="hero-paragraph">Lunar Starship is a Binance Smart Chain token that distributes passive earnings to holders and serves as the connective tissue for the entire Lunar ecosystem. With very solid token economics, a revolutionary use case, and a killer team behind it, it's in a great position to live up to its name.</p>
+	                        <div class="hero-cta">
+								<a class="button button-primary button-wide-mobile" href="#">Join telegram</a>
+								<a class="button button-primary button-wide-mobile" href="#">Buy Lunar Star Ship</a>
+							</div>
+						</div>
+						<div class="mockup-container">
+							<div class="mockup-bg">
+								<img src="dist/images/iphone-hero-bg.svg" alt="iPhone illustration">
+							</div>
+							<img class="device-mockup" src="dist/images/logo.png" alt="iPhone Hero">
+						</div>
+                    </div>
+                </div>
+            </section>
+
+			<section class="features-extended section">
+                <div class="features-extended-inner section-inner">
+					<div class="features-extended-wrap">
+						<div class="container">
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="dist/images/iphone-feature-bg-01.svg" alt=" illustration">
+									</div>
+									<img class="device-mockup is-revealing" src="dist/images/logo.png" alt="">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Lunar Starship is not just some meme token.</h3>
+									<p class="m-0">Explore some of the reasons why the Lunar Starship Ecosystem has the potential to become one of the most successful BSC projects to date.</p>
+								</div>
+							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="dist/images/iphone-feature-bg-02.svg" alt=" 02 illustration">
+									</div>
+									<img class="device-mockup is-revealing" src="dist/images/logo.png" alt=" 02">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Great token economics</h3>
+									<p class="m-0">3% to holders in native reflections, 4% to liquidity, 2% to marketing</p>
+								</div>
+							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="dist/images/iphone-feature-bg-03.svg" alt=" 03 illustration">
+									</div>
+									<img class="device-mockup is-revealing" src="dist/images/logo.png" alt=" 03">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Holder Reflections</h3>
+									<p class="m-0">Holders receive 3% of all Lunar Starship transactions in passive reflections.</p>
+								</div>
+							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="dist/images/iphone-feature-bg-04.svg" alt=" 04 illustration">
+									</div>
+									<img class="device-mockup is-revealing" src="dist/images/logo.png" alt=" 04">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Whale & Rug-Proof</h3>
+									<p class="m-0">1% max trade and 1% max wallet sizes are implemented to prevent whales from ruining the fun. Liquidity is also locked for 1 year.</p>
+								</div>
+							</div>
+							<div class="timeline">
+								<h1>ROADMAP</h1>
+								<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+								  <div class="timeline__event__icon ">
+									<i class="lni-cake"></i>
+									<div class="timeline__event__date">
+									  PHASE 0
+									</div>
+								  </div>
+								  <div class="timeline__event__content ">
+									<div class="timeline__event__title">
+									  COMPLETE
+									</div>
+									<div class="timeline__event__description">
+										<h1 style="font-size: 20px;">Build and launch website</h1>
+										<p>Build and launch website</p>
+										<h1 style="font-size: 20px;">Set up community infrastructure</h1>
+										<p>Telegram, Twitter, Facebook, and Reddit
+										Set up necessary bots on Telegram server</p>
+										<h1 style="font-size: 20px;">Develop marketing materials</h1>
+										<p>Marketing copy and shill messaging</p>
+										<p></p>Creative assets for advertising</p>
+									</div>
+								  </div>
+								</div>
+								<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+								  <div class="timeline__event__icon">
+									<i class="lni-burger"></i>
+									<div class="timeline__event__date">
+									  PHASE 1
+									</div>
+								  </div>
+								  <div class="timeline__event__content">
+									<div class="timeline__event__title">
+									  
+									</div>
+									<div class="timeline__event__description">
+										<h1 style="font-size: 20px;">Official Fair Launch of Lunar Starship</h1>
+										<p>Continue to build hype </p>
+										<p>Lunar Starship token launch on PancakeSwap</p>
+										<p>Leverage anti-bot/anti-snipe mechanism</p>
+										<h1 style="font-size: 20px;">Continue to market and drive hype</h1>
+										<p>Influencer partnerships</p>
+										<p>Promotions in other engaged TG communities</p>
+										<p>Conduct large AMAs in other TG communities</p>
+										<p>Continue to scale marketing spend</p>
+										<p>Grow market cap to the moon</p>
+									</div>
+								  </div>
+								</div>
+								<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+								  <div class="timeline__event__icon">
+									<i class="lni-slim"></i>
+									<div class="timeline__event__date">
+									  PHASE 2
+									</div>
+								  </div>
+								  <div class="timeline__event__content">
+									<div class="timeline__event__title">
+										
+									</div>
+									<div class="timeline__event__description">
+										<h1 style="font-size: 20px;">Lunar Starship Listing</h1>
+										<p>Listing on Coingecko</p>
+										<p>Listing on Coinmarketcap</p>
+										<h1 style="font-size: 20px;">More will be announce</h1>
+									</div>
+							  
+								  </div>
+								</div>
+								
+							  
+							  </div>
+						</div>
+					</div>
+                </div>
+            </section>
+        </main>
+
+		<footer class="site-footer">
+			<div class="footer-particles-container">
+				<canvas id="footer-particles"></canvas>
+			</div>
+			<div class="site-footer-top">
+				<section class="cta section text-light">
+					<div class="container-sm">
+						<div class="cta-inner section-inner">
+							<div class="cta-header text-center">
+								<h2 class="section-title mt-0">LUNAR STARSHIP</h2>
+								<p class="section-paragraph">Lunar Starship is a Binance Smart Chain token that distributes passive earnings to holders and serves as the connective tissue for the entire Lunar ecosystem. With very solid token economics, a revolutionary use case, and a killer team behind it, it's in a great position to live up to its name.</p>
+								<div class="cta-cta">
+									<a class="button button-primary button-wide-mobile" href="#">Join telegram</a>
+								<a class="button button-primary button-wide-mobile" href="#">Buy Lunar Star Ship</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="site-footer-bottom">
+				<div class="container">
+					<div class="site-footer-inner">
+						<div class="brand footer-brand">
+							<a href="#">
+								<img src="dist/images/logo.svg" alt="Venus logo">
+							</a>
+						</div>
+						<ul class="footer-links list-reset">
+							<li>
+								<a href="#">Contact</a>
+							</li>
+							<li>
+								<a href="#">About us</a>
+							</li>
+							<li>
+								<a href="#">FAQ's</a>
+							</li>
+							<li>
+								<a href="#">Support</a>
+							</li>
+						</ul>
+						<ul class="footer-social-links list-reset">
+							<li>
+								<a href="#">
+									Twitter
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Reddit
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Medium
+								</a>
+							</li>
+						</ul>
+						<div class="footer-copyright">&copy; 2021 LUNAR STARSHIP, all rights reserved</div>
+					</div>
+				</div>
+			</div>
+        </footer>
+    </div>
+
+    <script src="dist/js/main.min.js"></script>
+</body>
+</html>
